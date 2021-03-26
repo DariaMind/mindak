@@ -30,10 +30,13 @@
                 <a class="nav-link" href="/trainer">ТРЕНЕРСКИЙ СОСТАВ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/callback">ОБРАТНЫЙ ЗВОНОК</a>
+                <a class="nav-link" href="/callbacks">ОБРАТНЫЙ ЗВОНОК</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/contact">КОНТАКТЫ</a>
+                <a class="nav-link" href="/gallery">ГАЛЕРЕЯ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contacts">КОНТАКТЫ</a>
               </li>
               
             </ul>

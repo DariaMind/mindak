@@ -4,21 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use function PHPUnit\Framework\callback;
+
 class CallController extends Controller
 {
     public function callback()
     {
-       $title = 'Заказать обратный звонок';
-       return view('main.callback', compact('title'));
+       return view('main.callbacks');
     }
-    public function getCall(Request $requesr)
+    public function getCallback(Request $request)
     {
-        $validated = $requesr->validate([
-            'name'    => 'required|min:3|max:255',
-            'phone'   => 'required',
-            // 'message' => 'required|min:3',
-        ]); 
+        $validated = $request->validate([
+            'name' => 'required|min:2|max:30',
+            'holl' => 'required|min:1|max:255',
+            'phone' => 'required|min:7|max:255',
 
-        return back()->with('success', 'Спасибо! Ожидайте');
+        ]);
+       //dd($request->all());
+       return redirect('/callbacks')->with('success', 'Спасибо! Ожидайте звонок.');
     }
 }

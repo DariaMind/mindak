@@ -9,8 +9,9 @@ class Trainer extends Model
 {
     use HasFactory;
 
-    public function getPhotoAttribute($value)
+    public function getImgAttribute($value)
     {
-        return $value ? $value : '/img/no_photo.png'; 
+        return $value ? $value : '/media/no_img.png'; 
     }
+    
 }
