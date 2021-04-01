@@ -11,10 +11,11 @@ class MainController extends Controller
 {
     public function index()
     {
-        //$photos=Gallery::orderByDesc('created_at')->paginate(10);
-        $gallPhotos=Gallery::orderByDesc('created_at')->paginate(5);
-     //  dd($holls); where('category_id', $category->id)->paginate(2);
-        return view('main.index', compact('gallPhotos'));
+        $galleries = Gallery::orderByDesc('created_at')->paginate(5);
+      
+       // $gallPhotos=Gallery::orderByDesc('created_at')->paginate(5);
+     //  dd($holls); 
+        return view('main.index', compact('galleries'));
        
     }
    

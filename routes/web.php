@@ -1,11 +1,14 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\HollController;
 use App\Http\Controllers\CallController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\TimetableController;
 use App\Http\Controllers\TrainerController;
 use App\Http\Controllers\GalleryController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +29,14 @@ Route::get('/callbacks', [CallController::class, 'callback']);
 Route::post('/callbacks', [CallController::class, 'getCallback']);
 Route::get( '/gallery', [GalleryController::class, 'gallery']);
 Route::get( '/contacts', [MainController::class, 'contacts']);
+
+Auth::routes();
+
+Route::middleware(['auth'])->prefix('admin')->group(function(){
+        Route::get( '/', [AdminController::class, 'index']);
+        Route::resource( '/holl', HollController::class);
+});
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});

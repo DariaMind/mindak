@@ -6,7 +6,7 @@
     
 
 <h3>{{$holl->holl_number}}</h3>
-<div><p>{{$holl->address}}</p></div>
+<div><p>{!!$holl->address!!}</p></div>
 <div><img src="{{$holl->map_img}}" alt=""></div>
 
 @endforeach

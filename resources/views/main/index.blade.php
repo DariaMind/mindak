@@ -7,9 +7,9 @@
 <div class="baner"><img src="media/baner/baner.jpg" alt="baner"></div>
 <h2>our team</h2>
 
-@foreach ($gallPhotos as $gallPhoto)
-    <h4>Yjknvlknv</h4>
-    <div><img src="{{$gallPhoto->pic}}" alt=""></div>
+@foreach ($galleries as $gallery)
+    <h4><a href="{{$gallery->name}}">{{$gallery->name}}</a> </h4>
+    <div><img src="{{$gallery->pic}}" alt=""></div>
 @endforeach
 
 
