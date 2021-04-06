@@ -1,8 +1,9 @@
 @extends('layouts.main')
 
 @section('content')
-
-<h2>Заполните форму и мы перезвоним</h2>
+<title>callback</title>
+<section class="coll-form">
+<h2 class="coll-h">Заполните форму и мы перезвоним</h2>
   @include('main.messages.errors')
 
     @if (session('success'))
@@ -47,6 +48,6 @@
 </div>
 <button class="btn btn-primary mt-2">Send Review</button>
 </form>
-
+</section>
 
 @endsection

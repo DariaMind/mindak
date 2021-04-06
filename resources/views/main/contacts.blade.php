@@ -1,16 +1,21 @@
 @extends('layouts.main')
 
 @section('content')
+<section class="conacts-map">
+
 
 @foreach ($holls as $holl)
     
-
-<h3>{{$holl->holl_number}}</h3>
-<div><p>{!!$holl->address!!}</p></div>
-<div><img src="{{$holl->map_img}}" alt=""></div>
+<div class="add-line">
+{{-- {{$holl->holl_number}}  --}}
+    <div class="line-text"><h5>{!!$holl->address!!}</h5></div>
+    <div class="line-img"><img src="{{$holl->map_img}}" alt=""></div>
+  
+   
+</div>
 
 @endforeach
-
+</section>
 
 
 {{-- <h3 class="table">Зал №2 Южный мкр-н</h3>

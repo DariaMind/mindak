@@ -30,12 +30,15 @@ Route::post('/callbacks', [CallController::class, 'getCallback']);
 Route::get( '/gallery', [GalleryController::class, 'gallery']);
 Route::get( '/contacts', [MainController::class, 'contacts']);
 
-Auth::routes();
+Auth::routes(['register'=> false ]);
+//Auth::routes();, 'login'=> false
 
-Route::middleware(['auth'])->prefix('admin')->group(function(){
+Route::middleware(['auth', 'role:admin'])->prefix('admin')->group(function(){
         Route::get( '/', [AdminController::class, 'index']);
         Route::resource( '/holl', HollController::class);
-});
+        Route::resource( '/team', TeamController::class);
+        
+     });
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();

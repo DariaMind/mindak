@@ -28,13 +28,13 @@
 </div>
 <div class="form-group">
      {!! Form::label('address', 'Адрес') !!} 
-     {!! Form::textarea('address', null, ['class'=>'form-control']) !!}
+     {!! Form::text('address', null, ['class'=>'form-control']) !!}
  
 
 <div class="input-group">
     <span class="input-group-btn">
       <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-        <i class="fa fa-picture-o"></i> Choose
+        <i class="fa fa-picture-o"></i> Выбрать
       </a>
     </span>
     <input id="thumbnail" class="form-control" type="text" name="timetable_img" value="@isset($holl){{$holl->timetable_img}} @endisset">
@@ -48,7 +48,7 @@
 <div class="input-group">
     <span class="input-group-btn">
       <a id="lfm2" data-input="thumbnail2" data-preview="holder2" class="btn btn-primary">
-        <i class="fa fa-picture-o"></i> Choose
+        <i class="fa fa-picture-o"></i> Выбрать
       </a>
     </span>
     <input id="thumbnail2" class="form-control" type="text" name="map_img" value="@isset($holl){{$holl->map_img}} @endisset">

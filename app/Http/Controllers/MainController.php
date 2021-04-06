@@ -5,18 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Holl;
 use App\Models\Gallery;
-
+use App\Models\Trainer;
 
 class MainController extends Controller
 {
     public function index()
-    {
+    { 
         $galleries = Gallery::orderByDesc('created_at')->paginate(5);
-      
-       // $gallPhotos=Gallery::orderByDesc('created_at')->paginate(5);
-     //  dd($holls); 
-        return view('main.index', compact('galleries'));
-       
+        return view('main.index', compact('galleries'));       
     }
    
 public function contacts()
@@ -25,5 +21,7 @@ public function contacts()
   
        return view('main.contacts', compact('holls'));
 }
+
+
   
 }

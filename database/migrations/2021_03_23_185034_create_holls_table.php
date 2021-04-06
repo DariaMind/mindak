@@ -15,7 +15,7 @@ class CreateHollsTable extends Migration
     {
         Schema::create('holls', function (Blueprint $table) {
             $table->id();
-          $table->string('holl_number');
+            $table->string('holl_number');
             $table->string('name');
             $table->string('phone')->nullable();
             $table->string ('email')->nullable();

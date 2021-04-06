@@ -8,43 +8,50 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
     
-   
+   <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 
     @yield('css')
 </head>
 <body>
-   
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">DANCE</a>
-          {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span> --}}
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">О НАС</a>
+  <header>
+    <nav class="navbar">
+     
+         
+       <input type="checkbox" id="checkbox-menu">
+       <label for="checkbox-menu"></label>
+            <ul class="menu touch pages">  
+              <li><a class="logo" href="/">DANCE</a></li>
+              <li>
+                <a class="header-link" href="/">ГЛАВНАЯ</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/timetable">РАСПИСАНИЕ И ЦЕНЫ</a>
+              <li>
+                <a class="header-link" href="/timetable">РАСПИСАНИЕ И ЦЕНЫ</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/trainer">ТРЕНЕРСКИЙ СОСТАВ</a>
+              <li >
+                <a class="header-link" href="/trainer">ТРЕНЕРЫ</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/callbacks">ОБРАТНЫЙ ЗВОНОК</a>
+              {{-- <li >
+                <a class="header-link" href="/callbacks">ОБРАТНЫЙ ЗВОНОК</a>
+              </li> --}}
+              {{-- <li>
+                <a class="header-link" href="/gallery">ГАЛЕРЕЯ</a>
+              </li> --}}
+              <li >
+                <a class="header-link" href="/contacts">КОНТАКТЫ</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/gallery">ГАЛЕРЕЯ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/contacts">КОНТАКТЫ</a>
-              </li>
-              
             </ul>
-                       <!-- Right Side Of Navbar -->
-                       <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
+            
+            {{-- <span class="toggle">☰</span> --}}
+
+               <!-- Authentication Links -->
+                <ul id="log">  
+                      @role('admin')
+                        <li class="nav-item" id="log-ad">
+                          <a class="nav-link" href="/admin" style="color: white">Админ панель</a>
+                       </li>
+                      @endrole
+
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -59,7 +66,7 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="color: white">
                                     {{ Auth::user()->name }}
                                 </a>
 
@@ -76,33 +83,28 @@
                                 </div>
                             </li>
                         @endguest
-                    </ul>
-          </div>
-        </div>
+              <!-- Right Side Of Navbar -->
+            </ul>
+            <span class="toggle">☰</span>
+        {{-- </div> --}}
       </nav>
-      
+    </header>
+    
+    
 <div class="container">
     @yield('content')
 </div>
 
 <footer class="footer">
-  <div class="social-media">
-      <nav>
-          <ul>
-              <li><a href="">A</a></li>
-              <li><a href="">B</a></li>
-              <li><a href="">C</a></li>
-              <li><a href="">D</a></li>
-          </ul>
-      </nav>
-  </div>
-  <div class="adres">
-      <ul>
-          <li>jwljdwl </li>
-          <li>;jd;ljF:WJEF</li>
-          <li>kd:lfj;ljf</li>
-      </ul>
-  </div>
+ {{-- <p>&copy; Daria Mindak</p> --}}
+  <nav class="social-link">    
+    <a target="blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+    <a target="blank" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+    <a target="blank" href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+    <a target="blank" href="https://www.pinterest.com"><i class="fab fa-pinterest-p"></i></a>
+  </nav>  
+  
+ 
 </footer>
    
 
@@ -110,6 +112,6 @@
 
     @yield('js')
 
-
+    <script src="https://kit.fontawesome.com/927b8b82ad.js" crossorigin="anonymous"></script>
 </body>
 </html>
