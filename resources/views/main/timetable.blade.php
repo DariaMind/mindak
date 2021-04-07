@@ -2,7 +2,7 @@
 
 
 @section('content')
-   <section>
+   <section class="table">
 @foreach ($holls as $holl)
 
 <h3 >{{$holl->name}}</h3>    

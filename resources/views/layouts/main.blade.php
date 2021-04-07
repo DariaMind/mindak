@@ -6,22 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>@yield('title')</title>
     
    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
     @yield('css')
 </head>
 <body>
   <header>
-    <nav class="navbar">
-     
-         
-       <input type="checkbox" id="checkbox-menu">
-       <label for="checkbox-menu"></label>
-            <ul class="menu touch pages">  
-              <li><a class="logo" href="/">DANCE</a></li>
+    <nav class="navbar"> 
+      <a class="logo" href="/">DANCE</a>
+{{-- navbar-light bg-light --}}
+      <nav class="navbar navbar-expand-lg  navbar" id="boot-nav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
+          <span class="navbar-toggler-icon" id="boot-btn"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav top-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">ГЛАВНАЯ<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="/timetable">РАСПИСАНИЕ И ЦЕНЫ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/trainer">ТРЕНЕРЫ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contacts">КОНТАКТЫ</a>
+           </li>
+           {{-- <li class="nav-item">
+            <a class="header-link" href="/callbacks">ОБРАТНЫЙ ЗВОНОК</a>
+          </li>   --}}
+          {{-- <li>
+            <a class="header-link" href="/gallery">ГАЛЕРЕЯ</a>
+          </li> --}}                   
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+         {{-- <ul class="top-nav" id="myTopnav">  
+              
               <li>
                 <a class="header-link" href="/">ГЛАВНАЯ</a>
               </li>
@@ -30,18 +59,19 @@
               </li>
               <li >
                 <a class="header-link" href="/trainer">ТРЕНЕРЫ</a>
-              </li>
+              </li> --}}
               {{-- <li >
                 <a class="header-link" href="/callbacks">ОБРАТНЫЙ ЗВОНОК</a>
               </li> --}}
               {{-- <li>
                 <a class="header-link" href="/gallery">ГАЛЕРЕЯ</a>
               </li> --}}
-              <li >
+              {{-- <li >
                 <a class="header-link" href="/contacts">КОНТАКТЫ</a>
               </li>
-            </ul>
-            
+              
+          </ul>
+            <a href=""class="icon"><i class="fas fa-align-justify"></i></a> --}}
             {{-- <span class="toggle">☰</span> --}}
 
                <!-- Authentication Links -->

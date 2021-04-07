@@ -1,0 +1,6 @@
+.admin-items li a{
+    /* list-style-type: none; */
+  line-height: 20px;
+  color: magenta;
+  text-decoration: magenta solid;
+  }

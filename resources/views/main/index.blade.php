@@ -4,6 +4,7 @@
 @section('content')
    
                     {{-- /* слайд */ --}}
+                    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
 <title>DANCE</title>
 <div class="baner"><img src="media/baner/baner.jpg" alt="baner"></div>
                 {{-- /* общий раздел */ --}}
@@ -26,8 +27,8 @@
       
         <img class="square" src="media/square/hip-hop.jpg" alt="hip-hop">
         <img class="square" src="media/square/k-pop.JPG" alt="k-hop">
-        <img class="square" src="media/square/jazz.png" alt="k-hop">
-        <img class="square" src="media/square/belly.jpg" alt="k-hop">        
+        <img class="square" src="media/square/jazz.png" alt="jazz">
+        <img class="square" src="media/square/belly.jpg" alt="belly">        
     </div>
 </div>
 </div>
@@ -35,20 +36,23 @@
                         {{-- /* trainers */ --}}
 <section class="trainer">
 <div class="wrapper">
-<h2 class="clab-brend">Лучшие тренеры</h2>
+    <h2 class="clab-brend" id="best">Best trainers</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Debitis autem nisi beatae.</p>
 </div>
+<div class="cards">
 @foreach ($trainers as $trainer)
- <div class="cards">
+ 
     <div class="card">
-        <img src="{{$trainer->img}}" alt="">
+        <img src="{{$trainer->img}}" alt="trainer-dance">
         <div class="card-container">
             <h4>{{$trainer->name}}</h4>
             {{-- <p>{{$trainer->description}}</p> --}}
         </div>      
     </div> 
-</div>  
+ 
 @endforeach
-
+</div> 
     {{-- <div class="card">
         <img src="media/train/5.jpg" alt="">
         <div class="card-container">

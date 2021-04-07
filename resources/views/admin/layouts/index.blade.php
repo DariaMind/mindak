@@ -26,7 +26,7 @@
   <!-- summernote -->
   <link rel="stylesheet" href="/plugins/summernote/summernote-bs4.min.css">
 <link rel="stylesheet" href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
-  
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -74,7 +74,7 @@
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
       {{-- <img src="/media/no-photo.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> --}}
-      <span class="brand-text font-weight-light">DANCE</span>
+      <span class="brand-text font-weight-light " style=" font-family: 'Train One', cursive; color: rgb(224, 7, 231);">DANCE</span>
     </a>
 
     <!-- Sidebar -->
@@ -82,7 +82,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="/media/no-photo.jpg" class="img-circle elevation-2" alt="User Image">
+          {{-- <img src="/media/no-photo.jpg" class="img-circle elevation-2" alt="User Image"> --}}
         </div>
         <div class="info">
           <a href="#" class="d-block">{{Auth::user()->name}}</a>
@@ -91,11 +91,11 @@
  
 
                  <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+      <nav class="mt-2" >
+        <ul class="nav nav-pills nav-sidebar flex-column admin-items" data-widget="treeview" role="menu" data-accordion="false">
         
-            <li class="list-item"><a href="/admin/holl">Залы</a></li>
-            <li class="list-item"><a href="/admin/trainer">Тренеры</a></li>
+            <li class="list-item admin-point"><a href="/admin/holl"><i class="fas fa-map-pin" style="margin: 10px 20px; "></i>Залы</a></li>
+            <li class="list-item admin-point"><a href="/admin/trainer"><i class="fas fa-map-pin" style="margin: 10px 20px; "></i>Тренеры</a></li>
             {{-- <li class="list-item"><a href="/admin/gallery">Галерея</a></li> --}}
         </ul>
       </nav>
