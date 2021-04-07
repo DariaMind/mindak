@@ -1,16 +1,16 @@
 @extends('admin.layouts.index')
 
 @section('content')
-    <h4 class="admin-h">Изменить данные</h4>
-    {!! Form::model($holl, ['url' => '/admin/holl/'.$holl->id, 'files'=>true, 'method' => 'put']) !!}
+    <h4 class="admin-h">Добавить тренера</h4>
 
-    @include('admin.holl._form')
+    {!! Form::open(['url' => '/admin/trainer', 'files'=>true]) !!}
+
+    @include('admin.trainer._form')
     
     {!! Form::close() !!}
  
 
 @endsection
-
 
 
 @section('js')
@@ -23,8 +23,7 @@
     filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
     filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
   };
-    CKEDITOR.replace('address', options);
-    $('#lfm').filemanager('image');
-    $('#lfm2').filemanager('image');
+    CKEDITOR.replace('description', options);
+    $('#lfm3').filemanager('image');
 </script>
 @endsection

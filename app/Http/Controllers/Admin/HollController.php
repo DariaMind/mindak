@@ -85,7 +85,7 @@ class HollController extends Controller
         ]);
         $holl = Holl::findOrFail($id);
         $holl->update( $request->all() );
-          return redirect('/admin/holl'); 
+        return redirect('/admin/holl'); 
     }
 
     /**

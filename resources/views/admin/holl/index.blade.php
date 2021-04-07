@@ -2,7 +2,7 @@
 
 @section('content')
     <h4 class="admin-h">З А Л Ы</h4>
-    <a href="/admin/holl/create" class="btn btn-primary mb-2">Добавить зал</a>
+    <a href="/admin/holl/create" class="btn btn-success mb-2">Добавить зал</a>
 <table class="table" id="dataTable">
     <thead>
         <tr>
@@ -29,7 +29,7 @@
             <td>{!!$item->address!!}</td>
             <td><img src="{{asset($item->timetable_img)}}" alt="table" style="width:60px; hight: 60px;"></td>
             <td><img src="{{asset($item->map_img)}}" alt="map" style="width:60px; hight: 60px;"></td> 
-            <td><a href="/admin/holl/{{$item->id}}/edit" class="btn btn-warning">Изменить</a>
+            <td><a href="/admin/holl/{{$item->id}}/edit" class="btn btn-info">Изменить</a>
             {!! Form::open(['url' => '/admin/holl/'.$item->id, 'method' => 'DELETE']) !!}
             <button class="btn btn-danger">DELETE</button>
             {!! Form::close() !!}

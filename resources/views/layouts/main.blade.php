@@ -103,9 +103,7 @@
     <a target="blank" href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
     <a target="blank" href="https://www.pinterest.com"><i class="fab fa-pinterest-p"></i></a>
   </nav>  
-  
- 
-</footer>
+ </footer>
    
 
     <script src="{{asset('js/app.js')}}"></script>

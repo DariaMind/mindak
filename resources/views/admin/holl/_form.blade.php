@@ -28,8 +28,8 @@
 </div>
 <div class="form-group">
      {!! Form::label('address', 'Адрес') !!} 
-     {!! Form::text('address', null, ['class'=>'form-control']) !!}
- 
+     {!! Form::textarea('address', null, ['class'=>'form-control']) !!}
+    </div>
 
 <div class="input-group">
     <span class="input-group-btn">

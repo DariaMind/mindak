@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Trainer;
 use Illuminate\Http\Request;
 
 class TeamController extends Controller
@@ -14,7 +15,8 @@ class TeamController extends Controller
      */
     public function index()
     {
-        //
+        $teams = Trainer::all();
+        return view('admin.trainer.index', compact('teams'));
     }
 
     /**
@@ -24,7 +26,8 @@ class TeamController extends Controller
      */
     public function create()
     {
-        //
+        // admin/team/create
+        return view('admin.trainer.create');
     }
 
     /**
@@ -35,7 +38,16 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+     
+
+        $request->validate([
+            'name' => 'required|max:255',
+            'slug' => 'required|unique:trainers|max:255',
+            
+        ]);
+          Trainer::create( $request->all() );
+        
+          return redirect('/admin/trainer');  
     }
 
     /**
@@ -57,7 +69,8 @@ class TeamController extends Controller
      */
     public function edit($id)
     {
-        //
+        $trainer = Trainer::findOrFail($id);
+        return view('admin.trainer.edit', compact('trainer'));
     }
 
     /**
@@ -69,7 +82,14 @@ class TeamController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|max:255',
+            'slug' => 'required|unique:trainers,slug,'.$id.'|max:255',
+            
+        ]);
+        $trainer = Trainer::findOrFail($id);
+        $trainer->update( $request->all() );
+          return redirect('/admin/trainer'); 
     }
 
     /**
@@ -80,6 +100,7 @@ class TeamController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Trainer::findOrFail($id)->delete();
+       return redirect('/admin/trainer'); 
     }
 }

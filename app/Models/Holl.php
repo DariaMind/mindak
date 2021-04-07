@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Holl extends Model
 {
     use HasFactory;
-    // 'address',
+    // 
 
-    protected $fillable = ['holl_number', 'phone', 'name', 'slug', 'email',  'timetable_img', 'map_img'];
+    protected $fillable = ['holl_number', 'phone', 'name', 'slug', 'email', 'address', 'timetable_img', 'map_img'];
 
 
      public function getTimetableImgAttribute($value)

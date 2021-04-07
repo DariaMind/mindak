@@ -9,6 +9,8 @@ class Trainer extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['img', 'name', 'slug', 'description'];
+
     public function getImgAttribute($value)
     {
         return $value ? $value : '/media/no_img.png'; 

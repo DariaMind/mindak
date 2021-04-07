@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\HollController;
+use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\CallController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
@@ -36,7 +37,7 @@ Auth::routes(['register'=> false ]);
 Route::middleware(['auth', 'role:admin'])->prefix('admin')->group(function(){
         Route::get( '/', [AdminController::class, 'index']);
         Route::resource( '/holl', HollController::class);
-        Route::resource( '/team', TeamController::class);
+        Route::resource( '/trainer', TeamController::class);
         
      });
 

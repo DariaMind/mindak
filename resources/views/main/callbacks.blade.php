@@ -25,7 +25,7 @@
 </div>
 
     <div class="form-group">
-<label for="holl">Номер зала или район</label>
+<label for="holl">Район зала</label>
     <input type="text"
            class="form-control @error('holl') is-invalid @enderror"
            name="holl" 
@@ -46,7 +46,7 @@
            <div class="invalid-feedback">{{$message}}</div>
            @enderror
 </div>
-<button class="btn btn-primary mt-2">Send Review</button>
+<button type="submit" class="btn btn-primary mt-2">Отправить</button>
 </form>
 </section>
 

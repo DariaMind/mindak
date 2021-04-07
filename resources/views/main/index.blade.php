@@ -37,15 +37,19 @@
 <div class="wrapper">
 <h2 class="clab-brend">Лучшие тренеры</h2>
 </div>
-<div class="cards">
+@foreach ($trainers as $trainer)
+ <div class="cards">
     <div class="card">
-        <img src="media/train/petrova.jpg" alt="">
+        <img src="{{$trainer->img}}" alt="">
         <div class="card-container">
-            <h4>Lorem Ipsum.</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eveniet?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eveniet?</p>
+            <h4>{{$trainer->name}}</h4>
+            {{-- <p>{{$trainer->description}}</p> --}}
         </div>      
-    </div>
-    <div class="card">
+    </div> 
+</div>  
+@endforeach
+
+    {{-- <div class="card">
         <img src="media/train/5.jpg" alt="">
         <div class="card-container">
             <h4>Lorem Ipsum.</h4>
@@ -65,8 +69,8 @@
             <h4>Lorem Ipsum.</h4>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eveniet?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eveniet?</p>
         </div>      
-    </div>
-</div>
+    </div> --}}
+
 
 
 </section>
