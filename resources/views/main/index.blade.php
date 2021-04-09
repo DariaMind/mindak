@@ -7,6 +7,7 @@
                     <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
 <title>DANCE</title>
 <div class="baner"><img src="media/baner/baner.jpg" alt="baner"></div>
+
                 {{-- /* общий раздел */ --}}
       <h2 class="clab-brend">DANCE</h2>           
 <section class="stats wrapper">

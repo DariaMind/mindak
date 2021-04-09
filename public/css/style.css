@@ -94,8 +94,9 @@ border-radius: 3px;
 .baner>img{
     margin: 0;
     width: 100%;
-
 }
+
+
 
                                 /* общий раздел */
                     /* виды танцев */
@@ -189,15 +190,6 @@ border-radius: 3px;
     font-weight: bold;
     line-height: 25px;
    }
-   .clab-brend{
-       /* margin-bottom: 20px;
-       font-size: 40px;
-       text-transform: uppercase;
-       text-align: center; */
-      
-       /* color: rgb(4, 4, 39);
-     font-family: 'Train One', cursive; */
-   }  
   
    .trainers p:nth-child(3){
     margin-bottom: 60px;
@@ -282,22 +274,25 @@ border-radius: 3px;
 }
 .line-text{
     margin-right: 1em;
-    
+    width: 30%;
 }
 .line-text>h5{
     margin-top: 50px;
     text-align: right;
     margin-left: 0;
     margin-right: 30px;
+    
 }
 
 .line-img{
 box-shadow:  0 0 15px rgb(49, 84, 240);
-
+/* height: 400px;
+width: 800px; */
 }
 .line-img>img{
     
 width: 100%;
+height: 100%;
  object-fit: cover;  
      
 }
@@ -329,13 +324,12 @@ width: 100%;
 
 
                 /* Trainers */
+              
  .trainer-section{
   display: flex;   
 text-align: left;
 width: 100%;
 border-bottom: 1px solid gray;
-
-
  }
 
 
@@ -384,44 +378,11 @@ border-bottom: 1px solid gray;
 
 
 
-@media(max-width: 1000px){
-   
-
-
-}
 @media (max-width: 800px)
 {
-            /* .menu{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            height: 0;
-            transition: height .3 linear;
+     
 
-        }
-        .menu li{
-           display: flex;
-           align-self: center;
-           width: 95%;
-           visibility: hidden;
-        }
-        .menu li a{
-            width: 95%;
-            text-align: center;
-            align-self: center;
-            align-content: center;
-        }
-        .menu li a.logo{
-                font-size: 20px;
-                margin-right: 0;
-            
-        } */
-
-        /* слайд */
-                        /* общий раздел */
-                        /* виды танцев */
-
+      
                         /* media trainers */
    .cards{
     
@@ -461,7 +422,13 @@ border-bottom: 1px solid gray;
             font-size: smaller;
             font-weight: normal;
         }
+        .line-text>h5{
+            margin-top: 20px;}
 
+        .line-text{
+         
+            width: 100%;
+        }
 }
 @media(max-width: 400px){
     .trainer h2{

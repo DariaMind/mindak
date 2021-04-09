@@ -8,7 +8,13 @@
     
 <div class="add-line">
 {{-- {{$holl->holl_number}}  --}}
-    <div class="line-text"><h5>{!!$holl->address!!}</h5></div>
+    <div class="line-text"><h5>{!!$holl->address!!}
+        <p>{!!$holl->phone!!}</p>
+    <p>{!!$holl->email!!} </p>
+    </h5>
+
+    </div>
+    
     <div class="line-img"><img src="{{$holl->map_img}}" alt=""></div>
   
    

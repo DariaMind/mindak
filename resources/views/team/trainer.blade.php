@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <h3>{{$title}}</h3>
+    <h3 class="title__trainer">{{$title}}</h3>
  
 @foreach ($trainers as $trainer)
    <section class="trainer-section">

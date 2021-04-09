@@ -75,7 +75,7 @@
             {{-- <span class="toggle">☰</span> --}}
 
                <!-- Authentication Links -->
-                <ul id="log">  
+                <ul id="log" style="list-style-type: none;">  
                       @role('admin')
                         <li class="nav-item" id="log-ad">
                           <a class="nav-link" href="/admin" style="color: white">Админ панель</a>

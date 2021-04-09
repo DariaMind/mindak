@@ -1,7 +1,7 @@
 @extends('admin.layouts.index')
 
 @section('content')
-    <h4 class="admin-h">Транерский состав</h4>
+    <h4 class="admin-h">Трeнерский состав</h4>
    {{-- admin/team/create --}} 
     <a href="/admin/trainer/create" class="btn btn-success mb-2">Добавить тренера</a>
 <table class="table" id="dataTable">

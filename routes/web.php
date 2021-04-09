@@ -32,7 +32,7 @@ Route::get( '/gallery', [GalleryController::class, 'gallery']);
 Route::get( '/contacts', [MainController::class, 'contacts']);
 
 Auth::routes(['register'=> false ]);
-//Auth::routes();, 'login'=> false
+// Auth::routes();
 
 Route::middleware(['auth', 'role:admin'])->prefix('admin')->group(function(){
         Route::get( '/', [AdminController::class, 'index']);
