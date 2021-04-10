@@ -115,7 +115,7 @@
                         @endguest
               <!-- Right Side Of Navbar -->
             </ul>
-            <span class="toggle">☰</span>
+            {{-- <span class="toggle">☰</span> --}}
         {{-- </div> --}}
       </nav>
     </header>
